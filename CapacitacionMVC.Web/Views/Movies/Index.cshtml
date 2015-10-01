@@ -37,9 +37,9 @@
             <tr>
                 <th style="display: none;"></th>
                 <th>Name</th>
-                <th>Release Date</th>
-                <th>Runtime</th>
-                <th>Genres</th>
+                <th class="hidden-xs">Release Date</th>
+                <th class="hidden-xs">Runtime</th>
+                <th class="hidden-xs">Genres</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -52,9 +52,9 @@
                         <img src="@movie.CoverLink" style="height: 30px;" />
                         <span id="movie_Name">@movie.Name</span>
                     </td>
-                    <td>@Html.DisplayFor(m => movie.ReleaseDate, "Date")</td>
-                    <td>@movie.Runtime</td>
-                    <td>@Html.DisplayFor(m => movie.Genres, "Genres")</td>
+                    <td class="hidden-xs">@Html.DisplayFor(m => movie.ReleaseDate, "Date")</td>
+                    <td class="hidden-xs">@movie.Runtime</td>
+                    <td class="hidden-xs">@Html.DisplayFor(m => movie.Genres, "Genres")</td>
                     <td>@Html.ActionLink("Edit", "Edit", new { movie.Id }) | <a class="deleteMovie" href="javascript:void(0)">Delete</a></td>
                 </tr>
             }

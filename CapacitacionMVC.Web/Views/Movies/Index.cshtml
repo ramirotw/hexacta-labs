@@ -55,7 +55,17 @@
                     <td class="hidden-xs">@Html.DisplayFor(m => movie.ReleaseDate, "Date")</td>
                     <td class="hidden-xs">@movie.Runtime</td>
                     <td class="hidden-xs">@Html.DisplayFor(m => movie.Genres, "Genres")</td>
-                    <td>@Html.ActionLink("Edit", "Edit", new { movie.Id }) | <a class="deleteMovie" href="javascript:void(0)">Delete</a></td>
+                    <td class="movies-table-actions">
+                        <a href="@Url.Action("Edit", new { movie.Id })">
+                            <span class="hidden-xs">Edit</span>
+                            <span class="glyphicon glyphicon-pencil hidden-sm hidden-md hidden-lg"></span>
+                        </a>
+                        <span class="hidden-xs">|</span>
+                        <a class="deleteMovie" href="javascript:void(0)">
+                            <span class="hidden-xs">Delete</span>
+                            <span class="glyphicon glyphicon-remove hidden-sm hidden-md hidden-lg"></span>
+                        </a>
+</td>
                 </tr>
             }
         </tbody>

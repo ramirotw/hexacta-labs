@@ -62,3 +62,11 @@ body {
     #footer p {
         margin: 20px 0;
     }
+
+.movies-table-actions .glyphicon {
+    font-size: 20px;
+}
+
+.movies-table-actions .glyphicon-pencil {
+    margin-right: 5px;
+}

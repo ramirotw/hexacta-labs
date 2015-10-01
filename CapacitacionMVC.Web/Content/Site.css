@@ -70,3 +70,7 @@ body {
 .movies-table-actions .glyphicon-pencil {
     margin-right: 5px;
 }
+
+.search-form .search-text {
+    max-width: 300px;
+}

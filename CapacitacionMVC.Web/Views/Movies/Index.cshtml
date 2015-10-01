@@ -8,12 +8,14 @@
 <h2>Películas</h2>
 <br />
 
-@using (Html.BeginForm("Index", "Movies", FormMethod.Get, new { @class = "form-inline", role = "form" }))
+@using (Html.BeginForm("Index", "Movies", FormMethod.Get, new { @class = "form-inline search-form", role = "form" }))
 {
-    <div class="form-group">
-        @Html.TextBoxFor(m => m.SearchText, new { @class = "form-control input-lg", type = "search", placeholder = Html.DisplayNameFor(m => m.SearchText), autofocus = "autofocus" })
+    <div class="input-group">
+        @Html.TextBoxFor(m => m.SearchText, new { @class = "form-control input-lg search-text", type = "search", placeholder = Html.DisplayNameFor(m => m.SearchText), autofocus = "autofocus" })
+        <span class="input-group-btn">
+            <button class="btn btn-primary btn-lg text-left" type="submit">Buscar</button>
+        </span>
     </div>
-    <button class="btn btn-primary btn-lg text-left" type="submit">Buscar</button>
 }
 
 <br />

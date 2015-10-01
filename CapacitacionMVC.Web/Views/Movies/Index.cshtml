@@ -32,44 +32,46 @@
     <br />
     <br />
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th style="display: none;"></th>
-                <th>Name</th>
-                <th class="hidden-xs">Release Date</th>
-                <th class="hidden-xs">Runtime</th>
-                <th class="hidden-xs">Genres</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var movie in Model.Movies)
-            {
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td style="display: none;">@Html.HiddenFor(m => movie.Id)</td>
-                    <td>
-                        <img src="@movie.CoverLink" style="height: 30px;" />
-                        <span id="movie_Name">@movie.Name</span>
-                    </td>
-                    <td class="hidden-xs">@Html.DisplayFor(m => movie.ReleaseDate, "Date")</td>
-                    <td class="hidden-xs">@movie.Runtime</td>
-                    <td class="hidden-xs">@Html.DisplayFor(m => movie.Genres, "Genres")</td>
-                    <td class="movies-table-actions">
-                        <a href="@Url.Action("Edit", new { movie.Id })">
-                            <span class="hidden-xs">Edit</span>
-                            <span class="glyphicon glyphicon-pencil hidden-sm hidden-md hidden-lg"></span>
-                        </a>
-                        <span class="hidden-xs">|</span>
-                        <a class="deleteMovie" href="javascript:void(0)">
-                            <span class="hidden-xs">Delete</span>
-                            <span class="glyphicon glyphicon-remove hidden-sm hidden-md hidden-lg"></span>
-                        </a>
-</td>
+                    <th style="display: none;"></th>
+                    <th>Name</th>
+                    <th class="hidden-xs">Release Date</th>
+                    <th class="hidden-xs">Runtime</th>
+                    <th class="hidden-xs">Genres</th>
+                    <th>Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model.Movies)
+                {
+                    <tr>
+                        <td style="display: none;">@Html.HiddenFor(m => movie.Id)</td>
+                        <td>
+                            <img src="@movie.CoverLink" style="height: 30px;" />
+                            <span id="movie_Name">@movie.Name</span>
+                        </td>
+                        <td class="hidden-xs">@Html.DisplayFor(m => movie.ReleaseDate, "Date")</td>
+                        <td class="hidden-xs">@movie.Runtime</td>
+                        <td class="hidden-xs">@Html.DisplayFor(m => movie.Genres, "Genres")</td>
+                        <td class="movies-table-actions">
+                            <a href="@Url.Action("Edit", new { movie.Id })">
+                                <span class="hidden-xs">Edit</span>
+                                <span class="glyphicon glyphicon-pencil hidden-sm hidden-md hidden-lg"></span>
+                            </a>
+                            <span class="hidden-xs">|</span>
+                            <a class="deleteMovie" href="javascript:void(0)">
+                                <span class="hidden-xs">Delete</span>
+                                <span class="glyphicon glyphicon-remove hidden-sm hidden-md hidden-lg"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
     <script>
         $(document).ready(function () {

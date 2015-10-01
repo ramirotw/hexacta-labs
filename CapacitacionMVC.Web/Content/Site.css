@@ -72,5 +72,13 @@ body {
 }
 
 .search-form .search-text {
-    max-width: 300px;
+    max-width: 767px;
+}
+
+@media (max-width: 767px) {
+
+    .create-movie {
+        float: right !important;
+    }
+
 }
